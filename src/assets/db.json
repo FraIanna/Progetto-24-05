@@ -1,0 +1,56 @@
+[
+  {
+    "brand": "Fiat",
+    "brandLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjrKAd479Pf_p1kBtw0J8h7QsT975HeLwaiu6Mx7eUmQ&s",
+    "model": "500L",
+    "modelImage": "https://www.automotiveaddicts.com/wp-content/uploads/2014/12/2015-Fiat-500L-8.jpg",
+    "year": 2015,
+    "price": 7500,
+    "available": false
+  },
+  {
+    "brand": "Fiat",
+    "brandLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjrKAd479Pf_p1kBtw0J8h7QsT975HeLwaiu6Mx7eUmQ&s",
+    "model": "500 Abarth",
+    "modelImage": "https://res.cloudinary.com/driveau/image/upload/v1616492186/cms/uploads/EgXGPreLQFKvRCV976KY.jpg",
+    "year": 2010,
+    "price": 3500,
+    "available": true
+  },
+  {
+    "brand": "Ford",
+    "brandLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_JBiK4Np853F8ZQu5_Vb6rOuTS6a2lTwb5i9j3bzktg&s",
+    "model": "Taurus",
+    "modelImage": "https://file.kelleybluebookimages.com/kbb/base/house/2009/2009-Ford-Taurus-FrontSide_FOTAU091_505x375.jpg",
+    "year": 2009,
+    "price": 5200,
+    "available": false
+  },
+  {
+    "brand": "Ford",
+    "brandLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_JBiK4Np853F8ZQu5_Vb6rOuTS6a2lTwb5i9j3bzktg&s",
+    "model": "Fiesta St",
+    "modelImage": "https://cdn-img.automoto.it/images/17769478/3000x/00047833.jpeg",
+    "year": 2021,
+    "price": 9700,
+    "available": true
+  },
+  {
+    "brand": "Audi",
+    "brandLogo": "https://inkbotdesign.com/wp-content/uploads/2020/10/new-audi-logo-design-2024-1024x576.webp",
+    "model": "A3",
+    "modelImage": "https://cdn.motor1.com/images/mgl/pPpzP/s3/2021-audi-a3-sedan-debut.jpg",
+    "year": 2021,
+    "price": 4300,
+    "available": true
+  },
+  {
+    "brand": "Audi",
+    "brandLogo": "https://inkbotdesign.com/wp-content/uploads/2020/10/new-audi-logo-design-2024-1024x576.webp",
+    "model": "Q7",
+    "modelImage": "https://media.ed.edmunds-media.com/audi/q7/2020/oem/2020_audi_q7_4dr-suv_prestige-55-tfsi-quattro_fq_oem_1_1600.jpg",
+    "year": 2020,
+    "price": 41700,
+    "available": false
+  }
+]

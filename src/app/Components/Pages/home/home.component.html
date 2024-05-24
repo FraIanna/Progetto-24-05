@@ -1,0 +1,181 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="text-center text-bg-dark rounded-4 p-3 mb-4">
+        Benvenuto su CarRental!
+      </h1>
+      <div class="row">
+        <div class="col" *ngIf="carsArr.length > 0">
+          <h2>I NOSTRI MARCHI</h2>
+          <div class="row pb-5">
+            <div class="d-flex flex-column col-md-4 align-items-center">
+              <div>
+                <img [src]="carsArr[0].brandLogo" alt="logo" class="w-100" />
+              </div>
+              <a
+                class="btn btn-outline-dark"
+                [routerLink]="['/brand', carsArr[0].brand]"
+                >Scopri di più</a
+              >
+            </div>
+            <div class="d-flex flex-column col-md-4 align-items-center">
+              <div>
+                <img [src]="carsArr[2].brandLogo" alt="logo" class="w-100" />
+              </div>
+              <a
+                class="btn btn-outline-dark"
+                [routerLink]="['/brand', carsArr[2].brand]"
+                >Scopri di più</a
+              >
+            </div>
+            <div class="d-flex flex-column col-md-4 align-items-center">
+              <div>
+                <img [src]="carsArr[4].brandLogo" alt="logo" class="w-100" />
+              </div>
+              <a
+                class="btn btn-outline-dark"
+                [routerLink]="['/brand', carsArr[4].brand]"
+                >Scopri di più</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div
+        class="row row-cols-3 row-cols-md-5 gap-5 justify-content-center align-items-center py-5 my-5 bg-dark rounded-5"
+      >
+        <div
+          class="card p-0 border-0 rounded-4 overflow-hidden shadow h-100"
+          *ngFor="let car of random; let i = index"
+          [ngClass]="{
+            'bg-avaible': true,
+            'bg-inavaible': false
+          }"
+        >
+          <img [src]="car.modelImage" class="card-img-top" alt="car" />
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <h5 class="card-title">{{ car.model }}</h5>
+              <div class="w-25">
+                <img [src]="car.brandLogo" alt="logo" class="w-100" />
+              </div>
+            </div>
+            <div class="card-text">
+              <p>Anno {{ car.year }}</p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <a
+                [routerLink]="['/car', car.model.trim().toLocaleLowerCase()]"
+                class="btn btn-outline-dark"
+                >Acquista: {{ car.price }} $</a
+              >
+              <p
+                *ngIf="carsArr[i].available !== undefined"
+                [ngClass]="{
+                  'text-success': carsArr[i].available,
+                  'text-danger': !carsArr[i].available
+                }"
+              >
+                {{ carsArr[i].available ? "Disponibile" : "Esaurito" }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <h2 class="text-center">Guarda anche</h2>
+      <div
+        class="row row-cols-3 row-cols-md-5 gap-5 justify-content-center align-items-center py-5 my-5 bg-dark rounded-5"
+      >
+        <div
+          class="card p-0 border-0 rounded-4 overflow-hidden shadow h-100"
+          *ngFor="let car of carsArr; let i = index"
+          [ngClass]="{
+            'bg-avaible': true,
+            'bg-inavaible': false
+          }"
+        >
+          <img [src]="car.modelImage" class="card-img-top" alt="car" />
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <h5 class="card-title">{{ car.model }}</h5>
+              <div class="w-25">
+                <img [src]="car.brandLogo" alt="logo" class="w-100" />
+              </div>
+            </div>
+            <div class="card-text">
+              <p>Anno {{ car.year }}</p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <a
+                [routerLink]="['/car', car.model.trim().toLocaleLowerCase()]"
+                class="btn btn-outline-dark"
+                >Acquista: {{ car.price }} $</a
+              >
+              <p
+                *ngIf="carsArr[i].available !== undefined"
+                [ngClass]="{
+                  'text-success': carsArr[i].available,
+                  'text-danger': !carsArr[i].available
+                }"
+              >
+                {{ carsArr[i].available ? "Disponibile" : "Esaurito" }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="row pt-5">
+        <div class="col">
+          <h2 class="text-center">
+            Acquistare un auto online non è mai stato così semplice!
+          </h2>
+          <div class="pt-5 row">
+            <div
+              class="d-flex flex-column align-items-center gap-2 text-center col-12 col-md-3"
+            >
+              <i class="bi bi-gear fs-1"></i>
+              <p class="fs-4">Configura la tu auto</p>
+              <p>
+                Scegli l'allestimento, il colore e personalizza la tua auto
+                senza sorprese sui prezzi.
+              </p>
+            </div>
+            <div
+              class="d-flex flex-column align-items-center gap-2 text-center col-12 col-md-3"
+            >
+              <i class="bi bi-chat-left-dots fs-1"></i>
+              <p class="fs-4">Affidati a un esperto​</p>
+              <p>
+                Il nostro team è a tua disposizione per supportarti durante
+                l'intero processo di acquisto.
+              </p>
+            </div>
+            <div
+              class="d-flex flex-column align-items-center gap-2 text-center col-12 col-md-3"
+            >
+              <i class="bi bi-cart fs-1"></i>
+              <p class="fs-4">Completa l'ordine</p>
+              <p>
+                Potrai acquistare la tua auto pagando solo l'anticipo e ultimare
+                l'acquisto nella sede che preferisci.
+              </p>
+            </div>
+            <div
+              class="d-flex flex-column align-items-center gap-2 text-center col-12 col-md-3"
+            >
+              <i class="bi bi-car-front-fill fs-1"></i>
+              <p class="fs-4">Ritira la tua nuova auto!</p>
+              <p>
+                Ritira la tua auto nella sede che hai scelto, puoi restituirla
+                senza pensieri entro 14 giorni dalla consegna.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
